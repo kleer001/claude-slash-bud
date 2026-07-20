@@ -64,9 +64,12 @@ https://github.com/$owner/$repo_name
 Prior state tagged $tag."
 echo "bud: pruned $subdir from mother (commit $(git rev-parse --short HEAD))"
 
+branch=$(git branch --show-current)
 if git rev-parse --abbrev-ref '@{u}' >/dev/null 2>&1; then
     git push --quiet && echo "bud: pushed mother"
+elif git remote get-url origin >/dev/null 2>&1; then
+    git push --quiet -u origin "$branch" && echo "bud: pushed mother, upstream set to origin/$branch"
 else
-    echo "bud: no upstream for $(git branch --show-current); push manually when ready"
+    echo "bud: mother has no remote; commit is local only"
 fi
 echo "bud: done. undo with: git reset --hard $tag"

@@ -72,7 +72,8 @@ Also set the repo description from the README's first line:
 
 Does: re-clone the remote and re-check every tracked file → tag
 `pre-bud/<name>-<stamp>` → `git bundle` the whole mother into
-`~/.claude/bud-backups/` → `git rm -r` → commit → push if an upstream exists.
+`~/.claude/bud-backups/` → `git rm -r` → commit → push (setting the upstream to
+`origin/<branch>` if the branch didn't have one; local-only if there's no remote).
 
 Refuses to cut if the remote is incomplete. Undo is `git reset --hard <tag>`.
 
