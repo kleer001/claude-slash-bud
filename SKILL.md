@@ -26,8 +26,11 @@ which one. That's the only question worth asking.
 
 ### 1. Split, create, push, verify (non-destructive)
 
+The two scripts live in `scripts/`, beside this SKILL.md — invoke them by absolute path,
+since the working directory is the mother repo, not the skill directory.
+
 ```bash
-~/.claude/skills/bud/scripts/bud_split.sh <subdir> [--name NAME] [--public] [--dest DIR]
+<skill-dir>/scripts/bud_split.sh <subdir> [--name NAME] [--public] [--dest DIR]
 ```
 
 Does: preflight (clean tree, tracked subdir, `gh` auth, name not taken, dest
@@ -67,7 +70,7 @@ Also set the repo description from the README's first line:
 ### 3. Prune the mother (destructive)
 
 ```bash
-~/.claude/skills/bud/scripts/bud_prune.sh <subdir> --name NAME
+<skill-dir>/scripts/bud_prune.sh <subdir> --name NAME
 ```
 
 Does: re-clone the remote and re-check every tracked file → tag

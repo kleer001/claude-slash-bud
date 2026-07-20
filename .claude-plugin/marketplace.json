@@ -1,0 +1,21 @@
+{
+  "name": "bud",
+  "owner": {
+    "name": "kleer001"
+  },
+  "metadata": {
+    "description": "Graduate a subdirectory into its own repo — history intact",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "bud",
+      "description": "Split a subdirectory out of its parent repo into a standalone GitHub repo with history, scaffold it, and prune the parent",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./"
+      ]
+    }
+  ]
+}
