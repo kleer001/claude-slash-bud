@@ -17,6 +17,10 @@ scripts/bud_prune.sh            # Phase 2: re-verify, tag, bundle, remove, push 
 references/offline-transfer.md  # Loaded only when there is no network between the two repos
 .claude-plugin/marketplace.json # Plugin packaging for `claude plugins install`
 README.md                       # User-facing docs
+docs/MARKETING.md               # Positioning, message pillars, channels, launch sequence
+docs/images/branch-source.jpg   # The generated branch artwork, without type
+docs/images/make_banner.py      # Composes banner.jpg from that plus the wordmark
+docs/images/banner.jpg          # The README header — a build output, never edited by hand
 ```
 
 `SKILL.md` is authoritative for the flow; the scripts are authoritative for the mechanics.
@@ -41,6 +45,9 @@ success is the one outcome worse than an error message.
 - Preflight before mutation: clean tree, tracked subdir, `gh` authenticated, repo name free,
   destination free. Cheap checks first.
 - All output is prefixed `bud: ` so it's greppable in a transcript.
+- `banner.jpg` is generated, not drawn. Change the wordmark or tagline in `make_banner.py` and
+  re-run it; never retouch the JPEG. The tagline auto-fits the gutter to the left of the branch,
+  so new wording re-flows instead of colliding with the artwork.
 - Paths in `SKILL.md` are written as `<skill-dir>/scripts/...` because the skill can be
   installed as a plugin or symlinked into `~/.claude/skills/` — never hardcode either.
 

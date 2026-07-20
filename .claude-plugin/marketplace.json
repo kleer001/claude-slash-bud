@@ -4,7 +4,7 @@
     "name": "kleer001"
   },
   "metadata": {
-    "description": "Graduate a subdirectory into its own repo — history intact",
+    "description": "For every folder that outgrows its mother repo — graduate a subdirectory into its own repo, history intact",
     "version": "1.0.0"
   },
   "plugins": [
