@@ -79,9 +79,10 @@ Each new `claude-slash-*` skill re-exposes the whole family.
 ## Asset checklist
 
 - [x] Banner, `docs/images/banner.jpg` (regenerate with `docs/images/make_banner.py`)
+- [x] Square mark, `docs/images/mark.svg` — for the GitHub avatar, favicon, and social preview.
+      Deliberately not a crop of the banner: that artwork is wide and low-contrast and dies in a
+      square. The mark is built on `/bob`'s system instead, so the two repos read as one suite.
 - [x] Public README with install, usage, safety contract, caveats
-- [ ] Square mark for avatars/favicons — the banner artwork is wide and low-contrast and does not
-      survive a square crop; this needs its own denser piece of art
 - [ ] GitHub repo description + topics set
 - [ ] Demo recording
 - [ ] Technical write-up
